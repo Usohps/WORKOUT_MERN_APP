@@ -13,7 +13,8 @@ console.log({filteredWorkout})
   }, []);
 
   const fetchAllWorkout = async () => {
-    const response = await fetch("http://localhost:4000/api/workouts");
+    console.log(process.env)
+    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/workouts`);
     const json = await response.json();
     // console.log({ json });
     if (response.ok) {

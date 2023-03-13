@@ -18,7 +18,7 @@ app.use("/api/workouts", workoutRoutes);
 // routes
 const start = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/workouts_details");
+    await mongoose.connect(`${process.env.DB_URL}/workouts_details`);
     await app.listen(process.env.PORT, () => {
       console.log("I am connected to db and listening on port", process.env.PORT);
     });

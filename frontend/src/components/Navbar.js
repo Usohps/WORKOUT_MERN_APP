@@ -8,7 +8,6 @@ function Navbar() {
     setQuery(e.target.value)
     dispatch({type:"SEARCH_WORKOUT",payload:e.target.value})
   };
-
   return (
     <>
       <div className="fixed top-0 left-0 right-0 bg-white">
